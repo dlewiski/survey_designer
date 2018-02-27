@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
-  database: survey_active_record_development
+  database: survey_designer_development
 
 test:
   adapter: postgresql
-  database: survey_active_record_test
+  database: survey_designer_test
