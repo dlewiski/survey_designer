@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1>Survey Designer</h1>
+</div>
+
+<form action='/survey/<%=@survey.id%>' method='post'>
+  <input type="hidden" name="_method" value="delete"><button type='submit' class='btn btn-danger'>Delete survey</button></form>
+
+
+  <h1><%=@survey.name%></h1>
+    <form action="/survey/<%=@survey.id%>" method="post">
+      <label for="question">Add A Question</label>
+      <input type="text" name="question" autocomplete="off">
+      <button type="submit" class="btn btn-warning">Add Question</button>
+    </form><br>
+
+<%@questions.each do |question|%>
+  <h3><%=question.question%></h3>
+  <form action='/question/<%=question.id%>' method='post'>
+    <input type="hidden" name="_method" value="delete"><button type='submit' class='btn btn-danger'>Delete question</button></form>
+<%end%>
+
+
+<a href="/">Return to homepage</a>

@@ -15,8 +15,8 @@ describe('survey') do
 
   describe('#capitalize_name') do
     it("capitalizes the name of the survey") do
-      test_survey = Survey.create({:name => "pony"})
-      expect(test_survey.name).to(eq("Pony"))
+      test_survey = Survey.create({:name => "pony starfield"})
+      expect(test_survey.name).to(eq("Pony Starfield"))
     end
   end
 end

@@ -5,6 +5,6 @@ class Survey < ActiveRecord::Base
   private
 
   def capitalize_name
-    self.name=(name().capitalize)
+    self.name=(name().titleize)
   end
 end
